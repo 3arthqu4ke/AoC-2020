@@ -34,11 +34,10 @@ def solve2(lines):
             line = lines[i]
             if operation == -1 and i > lastOp:
                 if "nop" in line:
-                    if line != "nop +0":
-                        operation = i
-                        current.append("jmp " + line.split(" ")[1])
-                        print(current[i])
-                        continue
+                    operation = i
+                    current.append("jmp " + line.split(" ")[1])
+                    print(current[i])
+                    continue
                 if "jmp" in line:
                     operation = i
                     current.append("nop " + line.split(" ")[1])
