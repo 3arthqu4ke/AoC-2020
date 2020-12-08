@@ -3,9 +3,9 @@ numbers = [int(i) for i in open("inputs.txt").read().strip().split("\n")]
 
 
 def solve1(entries):
-    for i in range(0, len(entries) - 1):
+    for i in range(0, len(entries)):
         num = entries[i]
-        for j in range(0, len(entries) - 1):
+        for j in range(0, len(entries)):
             if i == j:  # case 1010 ?
                 continue
             other = entries[j]
@@ -16,13 +16,13 @@ def solve1(entries):
 
 
 def solve2(entries):
-    for i in range(0, len(entries) - 1):
+    for i in range(0, len(entries)):
         num = entries[i]
-        for j in range(0, len(entries) - 1):
+        for j in range(0, len(entries)):
             if i == j:
                 continue
             other = entries[j]
-            for k in range(0, len(entries) - 1):
+            for k in range(0, len(entries)):
                 if i == k or j == k:
                     continue
                 other2 = entries[k]
