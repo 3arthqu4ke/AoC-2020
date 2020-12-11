@@ -11,14 +11,10 @@ def convertAdapters(lines):
 
 def solve1(lines):
     converted = convertAdapters(lines)
-    jolts = [0, 0]
+    jolts = [0, 0, 0, 0]
     for i in range(0, len(converted) - 1):
-        diff = int(converted[i + 1]) - int(converted[i])
-        if diff == 3:
-            jolts[0] += 1
-        elif diff == 1:
-            jolts[1] += 1
-    print("Jolt-1s * Jolt-3s: " + str(jolts[0] * jolts[1]))
+        jolts[int(converted[i + 1]) - int(converted[i])] += 1
+    print("Jolt-1s * Jolt-3s: " + str(jolts[1] * jolts[3]))
 
 
 def solve2(lines):
