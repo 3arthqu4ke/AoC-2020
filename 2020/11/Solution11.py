@@ -43,7 +43,6 @@ def getNewOccupation(letter, x, y, seats, line, neighbourfunc, mynameismaximumoc
     return letter
 
 
-# AHHH
 def neighbourFunc1(x, y, seats, line):
     result = [[0, 1], [1, 0], [0, -1], [-1, 0], [1, 1], [-1, -1], [1, -1], [-1, 1]]
     if x == 0:
